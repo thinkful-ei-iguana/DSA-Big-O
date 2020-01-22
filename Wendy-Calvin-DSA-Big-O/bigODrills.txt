@@ -77,7 +77,7 @@ function createPairs(arr) {
 
 The complexity of the function is proportional to its input size. It takes one array to create a pair of numbers to console.log.  
 
-## 7. Compute the sequence
+## 7. Compute the sequence: - O(log(n)) - Logarithmic Time
 What does the following algorithm do? What is its runtime complexity? Explain your answer
 
 function compute(num) {
@@ -96,3 +96,63 @@ function compute(num) {
     }
     return result;
 }
+
+Every order of magnitude increase to input, output grows by a value of 3.
+
+
+## 8. An Efficient Search -  O(log(n)) - Logarithmic Time
+In this example, we return to the problem of searching using a more sophisticated approach than in naive search, above. 
+Assume that the input array is always sorted. What is the Big O of the following algorithm? Explain your answer
+
+function efficientSearch(array, item) {
+    let minIndex = 0;
+    let maxIndex = array.length - 1;
+    let currentIndex;
+    let currentElement;
+
+    while (minIndex <= maxIndex) {
+        currentIndex = Math.floor((minIndex + maxIndex) / 2);
+        currentElement = array[currentIndex];
+
+        if (currentElement < item) {
+            minIndex = currentIndex + 1;
+        }
+        else if (currentElement > item) {
+            maxIndex = currentIndex - 1;
+        }
+        else {
+            return currentIndex;
+        }
+    }
+    return -1;
+}
+
+The array is split into some fraction then processed in each iteration of a logarithmic algorithm
+
+
+
+## 9. Random element - O(1)
+What is the Big O of the following algorithm? Explain your answer
+
+function findRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+The complexity of this function is equal to a single run time operation. It runs once, selects its element, returns the element and is done with it's process.
+
+
+
+10. What Am I? - O(n) - Linear time
+What does the following algorithm do? What is the Big O of the following algorithm? Explain your answer
+
+function isWhat(n) {
+    if (7 < 2 || 7 % 1 != 0) {
+        return false;
+    }
+    for (let i = 2; i < 7; ++i) {
+        if (7 % i == 0) return false;
+    }
+    return true;
+}
+
+The complexity of this function is proportionally grown in tandem to its input.
