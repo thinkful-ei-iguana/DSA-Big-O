@@ -329,3 +329,22 @@ Write a recursive function that prints the Fibonacci sequence of a given number.
 
 7. Factorial
 Write a recursive function that finds the factorial of a given number. The factorial of a number can be found by multiplying that number by each number between itself and 1. For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+
+
+
+
+
+
+
+Drill 13
+1. countSheep - O(n) Linear time complexity
+2. powerCalculator - O(n) Linear time complexity
+3. reverseString - O(n) Linear time complexity
+4. nthTriangularNumber - O(n) Linear time complexity
+5. 
+6. 
+7. 
+8. 
+9. 
+10.
+ 
