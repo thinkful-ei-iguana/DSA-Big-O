@@ -27,12 +27,13 @@ function sheepCounter(n) {
     }
   }
 }
-
+//O(n)
 sheepCounter(3);
 
 function powerCalc(base, exp) {
   return Math.pow(base, exp);
 }
+//O(1)
 
 function reverseString(str) {
   let newString = "";
@@ -42,4 +43,40 @@ function reverseString(str) {
   console.log(newString);
   return;
 }
+//O(n)
 reverseString("hello");
+
+function triangulateMe(n) {}
+//O(n)
+
+function stringSplitter(str) {
+  let newStr = str.split("/");
+  return newStr;
+}
+//O(n)
+
+function fibo(num) {
+  let result = [];
+  for (let i = 1; i <= num; i++) {
+    if (i === 1) {
+      result.push(0);
+    } else if (i === 2) {
+      result.push(1);
+    } else {
+      result.push(result[i - 2] + result[i - 3]);
+    }
+  }
+  return result;
+}
+
+//O(log(n))
+
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  for (let i = n-1; i >= 1; i--) {
+    n = n * i;
+  }
+  return n;
+}
