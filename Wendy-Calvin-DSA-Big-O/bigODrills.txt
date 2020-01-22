@@ -156,3 +156,77 @@ function isWhat(n) {
 }
 
 The complexity of this function is proportionally grown in tandem to its input.
+
+
+
+
+
+Derive an algorithm to solve the Tower of Hanoi puzzle.
+Implement your algorithm using recursion. Your program should display each movement of the disk from one rod to another.
+If you are given 5 disks, how do the rods look like after 7 recursive calls?
+How many moves are needed to complete the puzzle with 3 disks? with 4 disks? with 5 disks?
+What is the runtime of your algorithm?
+
+
+function TOH(n, source, dest, temp) {
+if(n===1){
+    console.log(source, dest)
+}
+TOH(n-1, source, temp, dest)
+3 rings is n=3
+
+}
+
+function print(a,b) {
+console.log(`moving disk ${a} to ${b})
+}
+
+TOH(2,A,B,C)
+
+if(disk.value is > indexOf.value) {
+    diskMove=false
+    return `movement is not valid`
+}
+
+currentPoleValue (this is what helps logic through valid movements)
+
+n is the number of rings. n is an integer
+
+
+
+if ring value is greater than the target point it is a valid move.
+
+number of disks, each disk should have a sequentially increasing value
+disk value
+disk values on pole (source,dest,temp)
+valid disk movement check
+attempt to move disk (recursively check whether movement is valid, if so then move, if next movement is invalid decrement movement)
+
+if(A=6 then B or C are valid)
+if(A=6 then movement costs 1)
+if(A=5 then movement costs 2)
+if(A=3 then movement costs 3)
+
+
+
+if A=[1,2,3]
+A>C
+A=[2,3]
+A>B
+B=[2]
+A=3
+B=2
+C=1
+C>B
+C=[]
+B=[1,2]
+A=[3]
+A>C
+C=[3]
+A=[]
+B=[1,2]
+B>A
+B>C
+C=[2,3]
+A>C
+C=[1,2,3]
