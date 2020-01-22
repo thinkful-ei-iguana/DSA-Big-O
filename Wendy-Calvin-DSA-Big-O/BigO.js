@@ -35,10 +35,11 @@ function powerCalc(base, exp) {
 }
 
 function reverseString(str) {
-  let newStr = "";
-  for (let i = 0; i < str.length; i++ ) {
-    if (str.charAt(str.length -1) ) {
-      newStr = newStr + 
-    }
+  let newString = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    newString += str[i];
   }
+  console.log(newString);
+  return;
 }
+reverseString("hello");
