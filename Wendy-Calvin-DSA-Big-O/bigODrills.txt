@@ -258,3 +258,26 @@ if(A=6 then B or C are valid)
 if(A=6 then movement costs 1)
 if(A=5 then movement costs 2)
 if(A=3 then movement costs 3)
+
+
+
+
+Tower of Hanoi function runs and is scalable
+
+function TOH(n, source, dest, via) {
+  if (n >= 1) {
+
+    // Move a tower of n-1 to the buffer peg, using the destination peg.
+    TOH(n - 1, source, via, dest);
+
+    // Move the remaining disk to the destination peg.
+    console.log('Move disk from Tower ', source, ' to Tower ', dest);
+
+    // Move the tower of `n-1` from the `buffer peg` to the `destination peg` using the `source peg`.        
+    TOH(n - 1, via, dest, source);
+  }
+  
+  return;
+}
+
+TOH(3, "A", "C", "B");
